@@ -1,0 +1,1 @@
+cd src/frontend/main && yarn install && yarn run start

@@ -1,0 +1,1 @@
+cd src/backend/main && yarn install && yarn run build && yarn run start:dev
