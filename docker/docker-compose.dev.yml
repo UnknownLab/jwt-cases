@@ -6,7 +6,8 @@ services:
       context: ./../src/frontend/main
       dockerfile: Dockerfile
     volumes:
-      - ./../src/frontend/main:/usr/src/app
+      - ./../src/frontend/main:/app
+      - /app/node_modules/
 
   backend:
     build:
@@ -14,6 +15,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./../src/backend/main:/usr/src/app
+      - /usr/src/app/node_modules/
 
   postgres:
     ports:

@@ -1,17 +1,13 @@
-# base image
 FROM node:12.2.0-alpine
 
 RUN apk add --no-cache bash
 
-WORKDIR /usr/src/app
+WORKDIR /app
 ENV NODE_ENV development
-ENV PORT 22001
 ENV CHOKIDAR_USEPOLLING true
+RUN CI=true
 
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY package.json /app/package.json
+RUN yarn
 
-COPY package.json /usr/src/app/package.json
-RUN npm install 
-RUN npm install react-scripts@3.3.1 -g 
-
-CMD ["bash", "/usr/src/app/bin/dev.sh"]
+CMD ["bash", "/app/bin/dev.sh"]
