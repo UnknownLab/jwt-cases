@@ -6,7 +6,7 @@ services:
       context: ./../src/frontend/main
       dockerfile: Dockerfile
     volumes:
-      - "./../src/frontend/main:/usr/src/app"
+      - ./../src/frontend/main:/usr/src/app
 
   backend:
     build:
