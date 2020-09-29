@@ -4,14 +4,14 @@ services:
   frontend:
     build:
       context: ./../src/frontend/main
-      dockerfile: Dockerfile-development
+      dockerfile: Dockerfile
     volumes:
-      - "./../src/frontend/main:/app"
+      - "./../src/frontend/main:/usr/src/app"
 
   backend:
     build:
       context: ./../src/backend/main
-      dockerfile: Dockerfile-development
+      dockerfile: Dockerfile
     volumes:
       - ./../src/backend/main:/usr/src/app
 
