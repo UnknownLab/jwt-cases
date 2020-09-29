@@ -1,6 +1,6 @@
 # jwt-cases
 
-#set .env files for any env
+# set .env files for any env
 1. ```bash bin/set-env-files.sh```
 2. check .env files in ./docker ./src/backend/main and ./src/frontend/main and change for your env
 
