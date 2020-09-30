@@ -1,0 +1,1 @@
+cd docker && bash bin/stop.sh
